@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import org.maplibre.android.geometry.LatLng
 import javax.inject.Inject
 
 @HiltViewModel
@@ -68,8 +69,12 @@ class EarthquakeFeedViewModel @Inject constructor(
     // USER LOCATION STREAM
     fun startLocationStream() {
         viewModelScope.launch {
-            streamUserLocation.invoke().collect { location ->
-
+            streamUserLocation.invoke().collect {
+                _uiState.update { current ->
+                    current.copy(
+                        location = LatLng(it.latitude, it.longitude)
+                    )
+                }
             }
         }
     }

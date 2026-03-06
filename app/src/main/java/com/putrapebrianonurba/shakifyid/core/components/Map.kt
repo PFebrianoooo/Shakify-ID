@@ -11,7 +11,6 @@ import org.maplibre.android.geometry.LatLng
 import org.maplibre.android.maps.Style
 import org.ramani.compose.CameraPosition
 import org.ramani.compose.MapLibre
-import org.ramani.compose.Margins
 import org.ramani.compose.Symbol
 import org.ramani.compose.UiSettings
 
@@ -44,8 +43,7 @@ fun Map(
         uiSettings = UiSettings(
             isAttributionEnabled = false,
             rotateGesturesEnabled = false,
-            isLogoEnabled = true,
-            logoMargins = Margins(left = 20, bottom = 260)
+            isLogoEnabled = false,
         )
     ) {
         // MARKERS

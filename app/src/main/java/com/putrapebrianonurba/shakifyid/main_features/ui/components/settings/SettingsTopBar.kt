@@ -14,6 +14,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
@@ -49,5 +50,7 @@ fun SettingsTopBar(
             titleContentColor = MaterialTheme.colorScheme.primary,
             containerColor = MaterialTheme.colorScheme.background
         ),
+        expandedHeight = 50.dp,
+        modifier = Modifier.shadow(1.dp)
     )
 }
