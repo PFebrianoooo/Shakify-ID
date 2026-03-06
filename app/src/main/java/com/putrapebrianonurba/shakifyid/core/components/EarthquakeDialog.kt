@@ -92,7 +92,7 @@ fun EarthquakeDialog(
                     ) {
                         Text(
                             text = title,
-                            style = MaterialTheme.typography.displayMedium,
+                            style = MaterialTheme.typography.displaySmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary,
                             textAlign = TextAlign.Center,

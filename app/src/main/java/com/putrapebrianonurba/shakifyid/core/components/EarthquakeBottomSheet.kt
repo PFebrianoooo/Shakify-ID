@@ -118,7 +118,7 @@ fun EarthquakeBottomSheet(
                     // LOCATION
                     Text(
                         text = earthquake?.location.orEmpty(),
-                        style = MaterialTheme.typography.displayMedium,
+                        style = MaterialTheme.typography.displaySmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
                     )
